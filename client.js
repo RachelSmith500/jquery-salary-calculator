@@ -8,8 +8,6 @@ function onReady(){
 //click listeners go here
 $('#submit').on('click', submitEmployeeData);
 console.log('submit form')
-$('#employeeData').on('click', deleteFunction);
-
 }    
 
 function submitEmployeeData(){
@@ -39,11 +37,12 @@ function submitEmployeeData(){
     $('#annualSalary').val('');
 
     buttonClicked();
+    $('.delete').on('click', deleteFunction);
 }
 
 function deleteFunction(){
     console.log('delete');
-    $(this).parent().remove();
+    $(this).parent().parent().remove();
 }
 
 function buttonClicked(){
