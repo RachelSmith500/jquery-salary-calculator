@@ -8,6 +8,7 @@ function onReady(){
 //click listeners go here
 $('#submit').on('click', submitEmployeeData);
 console.log('submit form')
+$('#employeeData').on('click', deleteFunction);
 
 }    
 
@@ -40,6 +41,11 @@ function submitEmployeeData(){
     buttonClicked();
 }
 
+function deleteFunction(){
+    console.log('delete');
+    $(this).parent().remove();
+}
+
 function buttonClicked(){
     let employeeToAdd = $("#employeeData");
 
@@ -54,8 +60,8 @@ function buttonClicked(){
                     <td>${employeeArray[i].employeeIdKey}</td>
                     <td>${employeeArray[i].titleKey}</td>
                     <td>${employeeArray[i].annualSalaryKey}</td>
+                    <td><button class="delete">Delete</button></td>
                 </tr>
-
             `)
     }
 }
