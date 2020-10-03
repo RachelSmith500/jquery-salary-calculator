@@ -4,6 +4,8 @@ $(document).ready(onReady);
 
 function onReady(){
 //click listeners go here
+$('#submit').on('click', submitEmployeeData);
+console.log('submit form')
 
 }    
 
