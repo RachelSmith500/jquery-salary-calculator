@@ -36,4 +36,26 @@ function submitEmployeeData(){
     $('#employeeId').val('');
     $('#title').val('');
     $('#annualSalary').val('');
+
+    buttonClicked();
+}
+
+function buttonClicked(){
+    let employeeToAdd = $("#employeeData");
+
+    employeeToAdd.empty();
+
+    for(let i=0; i < employeeArray.length; i++){
+        employeeToAdd.append
+            (` 
+                <tr>
+                    <td>${employeeArray[i].firstNameKey}</td>
+                    <td>${employeeArray[i].lastNameKey}</td>
+                    <td>${employeeArray[i].employeeIdKey}</td>
+                    <td>${employeeArray[i].titleKey}</td>
+                    <td>${employeeArray[i].annualSalaryKey}</td>
+                </tr>
+
+            `)
+    }
 }
