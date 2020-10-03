@@ -1,5 +1,7 @@
 console.log('js')
 
+let employeeArray = [];
+
 $(document).ready(onReady);
 
 function onReady(){
@@ -17,5 +19,21 @@ function submitEmployeeData(){
     let employeeId = $('#employeeId').val();
     let title = $('#title').val();
     let annualSalary = $('#annualSalary').val(); 
+
+    let employeeObject = {
+
+        firstNameKey: firstName,
+        lastNameKey: lastName,
+        employeeIdKey: employeeId,
+        titleKey: title,
+        annualSalaryKey: annualSalary
+    }
     
+    employeeArray.push(employeeObject);
+
+    $('#firstName').val('');
+    $('#lastName').val('');
+    $('#employeeId').val('');
+    $('#title').val('');
+    $('#annualSalary').val('');
 }
