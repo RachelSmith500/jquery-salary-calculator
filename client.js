@@ -25,7 +25,7 @@ function submitEmployeeData(){
         lastNameKey: lastName,
         employeeIdKey: employeeId,
         titleKey: title,
-        annualSalaryKey: annualSalary
+        annualSalaryKey: Number(annualSalary)
     }
     
     employeeArray.push(employeeObject);
@@ -63,4 +63,14 @@ function buttonClicked(){
                 </tr>
             `)
     }
+    annualSalarySum();
 }
+
+function annualSalarySum(){
+    let sum = 0;
+    for(let i=0; i < employeeArray.length; i++){
+      sum += Number(employeeArray[i].annualSalaryKey);
+    }
+    console.log('total salary sum', sum);
+}
+
