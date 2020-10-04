@@ -70,15 +70,17 @@ function annualSalarySum(){
     salaryToAdd.empty();
     for(let i=0; i < employeeArray.length; i++){
       sum += Math.floor(employeeArray[i].annualSalaryKey/12);
-    //   Number(salaryToAdd.append)
-       
-    }
-    console.log('total salary sum', sum);
+    }// console.log('total salary sum', sum);
     $('#MonthlyCost').append(sum);
-    // addSalaryToDOM();
+    
+    if(sum > 20000){
+        $('#MonthlyCost').addClass('redColor')
+    }
 }
 
-// function addSalaryToDOM(){
-//     let salaryToAdd = $("#MonthlyCost");
-//     employeeToAdd.empty();
+// function changeColor(){
+//     console.log('hello from changeColor');
+//     $('#MonthlyCost').toggleClass('redColor');
+//     //add and remove class toggle
 // }
+
