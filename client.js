@@ -47,9 +47,7 @@ function deleteFunction(){
 
 function buttonClicked(){
     let employeeToAdd = $("#employeeData");
-
     employeeToAdd.empty();
-
     for(let i=0; i < employeeArray.length; i++){
         employeeToAdd.append
             (` 
@@ -68,9 +66,19 @@ function buttonClicked(){
 
 function annualSalarySum(){
     let sum = 0;
+    let salaryToAdd = $("#MonthlyCost");
+    salaryToAdd.empty();
     for(let i=0; i < employeeArray.length; i++){
-      sum += Number(employeeArray[i].annualSalaryKey);
+      sum += Math.floor(employeeArray[i].annualSalaryKey/12);
+    //   Number(salaryToAdd.append)
+       
     }
     console.log('total salary sum', sum);
+    $('#MonthlyCost').append(sum);
+    // addSalaryToDOM();
 }
 
+// function addSalaryToDOM(){
+//     let salaryToAdd = $("#MonthlyCost");
+//     employeeToAdd.empty();
+// }
