@@ -28,6 +28,11 @@ function submitEmployeeData(){
         annualSalaryKey: Number(annualSalary)
     }
     
+    if((firstName === '') || (lastName === '') || (employeeId === '')||
+    (title === '') || (annualSalary === 0)){
+        alert('no empty field');
+        return false;
+    }
     employeeArray.push(employeeObject);
 
     $('#firstName').val('');
