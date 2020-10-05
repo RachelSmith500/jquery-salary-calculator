@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.5.1.min.js"></script>
     <script src="client.js"></script>
+    <link rel="stylesheet" href="bootstrap.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
     <title>Document</title>
 </head>
 <body>
+    <div class="container-fluid no-padding"> 
     <h1>JQuery Salary Calculator</h1>
+    <div>
     <main>
-        <div id= "employeeForm">
+        <div id= "employeeForm" class ="container">
         <label htmlFor "FirstName">First Name:</label>
         <input id="firstName" type="text" placeholder="First Name"/>
         <label htmlFor "lastName">Last Name:</label>
@@ -24,16 +27,19 @@
         <input id="annualSalary" type="number" placeholder="Annual Salary"/>
         <button id="submit">Submit</button>
     </div>
-    <table>
+    <div class="container-fluid no-padding"> 
+    <table class="table table-striped">
         <thead>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Employee ID</th>
-            <th>Title</th>
-            <th>Annual Salary</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Title</th>
+            <th Scope="col">Annual Salary</th>
         </thead>
-        <tbody id="employeeData"></tbody>
+        <tbody id="employeeData"></tbody> 
     </table>
+    <div>
+
         <p>Monthly Cost: $ <span id="MonthlyCost"></p>
     </main> 
 </body>

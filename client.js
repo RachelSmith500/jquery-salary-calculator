@@ -30,7 +30,7 @@ function submitEmployeeData(){
     
     if((firstName === '') || (lastName === '') || (employeeId === '')||
     (title === '') || (annualSalary === 0)){
-        alert('no empty field');
+        alert('please fill all input values');
         return false;
     }
     employeeArray.push(employeeObject);
@@ -48,6 +48,7 @@ function submitEmployeeData(){
 function deleteFunction(){
     console.log('delete');
     $(this).parent().parent().remove();
+    // employeeArray.length = 0;
 }
 
 function buttonClicked(){
@@ -56,7 +57,7 @@ function buttonClicked(){
     for(let i=0; i < employeeArray.length; i++){
         employeeToAdd.append
             (` 
-                <tr>
+                <tr scope="row">
                     <td>${employeeArray[i].firstNameKey}</td>
                     <td>${employeeArray[i].lastNameKey}</td>
                     <td>${employeeArray[i].employeeIdKey}</td>

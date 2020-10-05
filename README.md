@@ -1,9 +1,15 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Salary Calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This website tracks employee annual salaries and logs a running total of total monthly cost for all employees. If an employee no longer works at the company that employee can be removed from the list by clicking the delete button. 
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Built With
+
+This website is build with html, jQuery, CSS, and Bootstrap.
+
+## Acknowledgement
+
+Thank you to Prime for helping me make this application a reality and a special thank you to Norbu Samphel for helping me past a few roadblocks. 
+
+
